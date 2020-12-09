@@ -30,3 +30,31 @@
 .movieRow--item img:hover {
     transform: scale(1);
 }
+
+.movieRow--before, .movieRow--right {
+    position: absolute;
+    width: 40px;
+    height: 300px;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.movieRow--before {
+    left: 0;
+}
+
+.movieRow--right {
+    right: 0;
+}
+
+.movieRow:hover .movieRow--before,
+.movieRow:hover .movieRow--right {
+    opacity: 1;
+}
